@@ -1,0 +1,20 @@
+/**
+ * 
+ */
+package es.ubu.lsi.client;
+
+/**
+ * @author Andres
+ *
+ */
+public class ChatClientStarter {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

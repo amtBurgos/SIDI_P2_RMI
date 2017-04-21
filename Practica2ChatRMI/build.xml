@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="SocketsP1" default="javadoc" basedir=".">
+	<description>build.xml para ANT</description>
+
+	<!-- Properties of the project... -->
+
+	<!-- Dir properties -->
+	<property name="src.dir" value="${basedir}/src/main/java" />
+	<property name="build.dir" value="${basedir}/build" />
+	<property name="dist.dir" value="${basedir}/dist" />
+	<property name="doc.dir" value="${basedir}/doc" />
+	<property name="lib.dir" value="${basedir}/lib" />
+
+	<!-- ==================== Definition of CLASSPATH ====================================== -->
+	<path id="compile.classpath">
+		<pathelement location="${build.dir}" />
+		<fileset dir="${lib.dir}">
+			<include name="*.jar" />
+		</fileset>
+	</path>
+
+	<!-- =============== Development Targets ================================= -->
+
+	<target name="all" description="Development targets." depends="clean, prepare, compile, javadoc" />
+
+	<!-- ==================== Prepare Target ==================================== -->
+	<target description="Create directories" name="prepare">
+		<mkdir dir="${build.dir}" />
+		<mkdir dir="${dist.dir}" />
+		<mkdir dir="${doc.dir}" />
+		<mkdir dir="${lib.dir}" />
+	</target>
+
+	<!-- ==================== Clean Target ==================================== -->
+	<!-- Delete the previous files from directories, to rebuild the complete products. -->
+
+	<target description="Delete the directories with generated products ." name="clean">
+		<delete dir="${build.dir}" />
+		<delete dir="${dist.dir}" />
+		<delete dir="${doc.dir}" />
+		<delete dir="${lib.dir}" />
+	</target>
+
+
+	<!-- ==================== Compile Target ==================================== -->
+	<target name="compile" depends="prepare" description="Compile the full source files.">
+		<javac encoding="UTF-8" srcdir="${src.dir}" destdir="${build.dir}" source="1.8" target="1.8" includeantruntime="false">
+			<classpath refid="compile.classpath" />
+		</javac>
+	</target>
+	
+	<!-- ==================== Generate javadocs ==================== -->	
+	  <target name="javadoc" depends="compile" description="generate the application documentation.">
+	    <javadoc sourcepath="${src.dir}" destdir="${doc.dir}" encoding="UTF-8"/>
+	  </target>
+	
+</project>
