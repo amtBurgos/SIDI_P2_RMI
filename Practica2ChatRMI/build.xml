@@ -51,7 +51,7 @@
 	
 	<!-- ==================== Generate javadocs ==================== -->	
 	  <target name="javadoc" depends="compile" description="generate the application documentation.">
-	    <javadoc sourcepath="${src.dir}" destdir="${doc.dir}" encoding="UTF-8"/>
+	    <javadoc sourcepath="${src.dir}" destdir="${doc.dir}" encoding="UTF-8" charset="UTF-8" docencoding="UTF-8"/>
 	  </target>
 	
 </project>

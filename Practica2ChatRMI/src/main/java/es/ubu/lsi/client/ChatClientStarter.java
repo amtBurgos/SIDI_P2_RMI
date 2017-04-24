@@ -48,7 +48,7 @@ public class ChatClientStarter {
 		} else {
 			// Cerrar aplicación
 			System.out.println("Debes introducir el nombre de usuario y si quieres el del host.");
-			System.exit(1);
+			cerrarCliente(1);
 		}
 
 		try {
@@ -56,7 +56,7 @@ public class ChatClientStarter {
 		} catch (RemoteException e) {
 			// Si no se puede iniciar, cerramos.
 			System.err.println("No se puede iniciar el cliente");
-			System.exit(1);
+			cerrarCliente(1);
 		}
 		try {
 			try {
@@ -74,15 +74,15 @@ public class ChatClientStarter {
 			}
 		} catch (Exception e) {
 			System.err.println("No se puede iniciar el servidor, cerrando...");
-			System.exit(1);
+			cerrarCliente(1);
 		}
 
 		try {
-			// Registramos el cliente.
-			server.checkIn(client);
+			// Registramos el cliente y le damos un id.
+			client.setId(server.checkIn(client));
 		} catch (RemoteException e) {
-			System.err.println("No se puede registrat el cliente, cerrando...");
-			System.exit(1);
+			System.err.println("No se puede registrar el cliente, cerrando...");
+			cerrarCliente(1);
 		}
 
 		mensajeBienvenida(nickName);
@@ -101,6 +101,29 @@ public class ChatClientStarter {
 				} finally {
 					sendMessages = false;
 				}
+			} else if (msg.toLowerCase().matches("^\\s*shutdown\\s*")) {
+				try {
+					server.shutdown(client);
+					sendMessages = false;
+					System.out.println("El servidor se cerrará.");
+				} catch (RemoteException e) {
+					e.printStackTrace();
+					System.err.println("No se puede ordenar al servidor que se apague.");
+				}
+			} else if (msg.toLowerCase().matches("^\\s*ban\\s+\\S+\\s*")) {
+				String userToBan = banManager(msg);
+				try {
+					server.ban(new ChatMessage(client.getId(), client.getNickName(), userToBan));
+				} catch (RemoteException e) {
+					System.err.println("Error al banear usuario.");
+				}
+			} else if (msg.toLowerCase().matches("^\\s*unban\\s+\\S+\\s*")) {
+				String userToUnban = banManager(msg);
+				try {
+					server.unban(new ChatMessage(client.getId(), client.getNickName(), userToUnban));
+				} catch (RemoteException e) {
+					System.err.println("Error al desbanear usuario.");
+				}
 			} else {
 				try {
 					server.publish(new ChatMessage(client.getId(), client.getNickName(), msg));
@@ -114,8 +137,32 @@ public class ChatClientStarter {
 		// Cerrar scanner y salir del programa
 		scan.close();
 		System.out.println("Te has desconectado.");
-		System.exit(0);
+		cerrarCliente(0);
+	}
 
+	/**
+	 * Recibe un comando de baneo y devuelve el usuario al que hay que
+	 * aplicarselo.
+	 * 
+	 * @param message
+	 * @return
+	 */
+	private String banManager(String message) {
+		String[] command = message.split("\\s");
+		String username = null;
+		if (command.length >= 2) {
+			int counter = 0;
+			for (String word : command) {
+				if (!word.equals("")) {
+					counter++;
+					if (counter == 2) {
+						username = word;
+						break;
+					}
+				}
+			}
+		}
+		return username;
 	}
 
 	/**
@@ -133,6 +180,17 @@ public class ChatClientStarter {
 		System.out.println("    - UNBAN ");
 		System.out.println("    - LOGOUT ");
 		System.out.println("________________________________________\n");
+	}
+
+	/**
+	 * Desconecta el cliente.
+	 * 
+	 * @param code
+	 *            1 si es un error, 0 si desconexión normarl
+	 */
+	public void cerrarCliente(int code) {
+		System.out.println("Cerrando...");
+		System.exit(code);
 	}
 
 }

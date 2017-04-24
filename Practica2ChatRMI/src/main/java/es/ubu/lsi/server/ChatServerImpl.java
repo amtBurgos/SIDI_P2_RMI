@@ -3,7 +3,12 @@
  */
 package es.ubu.lsi.server;
 
+import java.lang.reflect.Array;
 import java.rmi.RemoteException;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Set;
 
 import es.ubu.lsi.client.ChatClient;
 import es.ubu.lsi.common.ChatMessage;
@@ -17,14 +22,52 @@ import es.ubu.lsi.common.ChatMessage;
  */
 public class ChatServerImpl implements ChatServer {
 
+	/**
+	 * Numero de clientes en el chat.
+	 */
+	private static int clientesTotales = 0;
+
+	/**
+	 * Nombre del servidor.
+	 */
+	private static String SERVER_NAME = "Server";
+
+	/**
+	 * Lista de clientes.
+	 */
+	private ArrayList<ChatClient> listaClientes;
+
+	/**
+	 * Mapa para llevar la cuenta de los baneos;
+	 */
+	private HashMap<String, HashSet<String>> listaBaneos;
+
+	/**
+	 * Contruye un servidor
+	 * 
+	 * @throws RemoteException
+	 *             RemoteException
+	 */
+	public ChatServerImpl() throws RemoteException {
+		super();
+		listaClientes = new ArrayList<ChatClient>();
+		listaBaneos = new HashMap<String, HashSet<String>>();
+	}
+
 	/*
 	 * (non-Javadoc)
 	 * 
 	 * @see es.ubu.lsi.server.ChatServer#checkIn(es.ubu.lsi.client.ChatClient)
 	 */
 	public int checkIn(ChatClient client) throws RemoteException {
-		// TODO Auto-generated method stub
-		return 0;
+		listaClientes.add(client);
+		// Si el cliente se ha vuelto a conectar no cambiamos los baneos que
+		// tenia configurados
+		if (!listaBaneos.containsKey(client.getNickName().toLowerCase())) {
+			listaBaneos.put(client.getNickName().toLowerCase(), new HashSet<String>());
+		}
+		publish(new ChatMessage(-1, SERVER_NAME, client.getNickName() + " se ha conectado."));
+		return clientesTotales++;
 	}
 
 	/*
@@ -33,8 +76,8 @@ public class ChatServerImpl implements ChatServer {
 	 * @see es.ubu.lsi.server.ChatServer#logout(es.ubu.lsi.client.ChatClient)
 	 */
 	public void logout(ChatClient client) throws RemoteException {
-		// TODO Auto-generated method stub
-
+		listaClientes.remove(client);
+		publish(new ChatMessage(-1, SERVER_NAME, client.getNickName() + " se ha desconectado"));
 	}
 
 	/*
@@ -44,8 +87,18 @@ public class ChatServerImpl implements ChatServer {
 	 * es.ubu.lsi.common.ChatMessage)
 	 */
 	public void privatemsg(String tonickname, ChatMessage msg) throws RemoteException {
-		// TODO Auto-generated method stub
+		ChatClient emisor = null;
+		for (ChatClient client : listaClientes) {
+			if (msg.getId() == client.getId()) {
+				emisor = client;
+			}
+		}
 
+		for (ChatClient receptor : listaClientes) {
+			if (receptor.getNickName().toLowerCase().equals(tonickname)) {
+				receptor.receive(new ChatMessage(msg.getId(), emisor.getNickName(), msg.getMessage() + " (private)"));
+			}
+		}
 	}
 
 	/*
@@ -54,8 +107,17 @@ public class ChatServerImpl implements ChatServer {
 	 * @see es.ubu.lsi.server.ChatServer#publish(es.ubu.lsi.common.ChatMessage)
 	 */
 	public void publish(ChatMessage msg) throws RemoteException {
-		// TODO Auto-generated method stub
 
+		// Gestionar el mensaje
+
+		for (ChatClient client : listaClientes) {
+			// Si el id es distinto lo mandamos
+			if (client.getId() != msg.getId()) {
+				// Si el usuario no está baneado por alguno lo mandamos
+				if (!checkIsBanned(client.getNickName(), msg.getNickname()))
+					client.receive(msg);
+			}
+		}
 	}
 
 	/*
@@ -64,8 +126,60 @@ public class ChatServerImpl implements ChatServer {
 	 * @see es.ubu.lsi.server.ChatServer#shutdown(es.ubu.lsi.client.ChatClient)
 	 */
 	public void shutdown(ChatClient client) throws RemoteException {
-		// TODO Auto-generated method stub
+		for (ChatClient cliente : listaClientes) {
+			if (cliente.getId() != client.getId()) {
+				cliente.receive(new ChatMessage(-1, SERVER_NAME, "El servidor se cerrará"));
+			}
+		}
+		listaClientes = null;
+		System.exit(0);
+	}
+
+	/**
+	 * Banea un usuario.
+	 * 
+	 * @param msg
+	 *            mensaje con los datos del usuario a banear
+	 */
+	public void ban(ChatMessage msg) {
+		String userToBan = msg.getMessage().toLowerCase();
+		String userWhoBan = msg.getNickname().toLowerCase();
+
+		HashSet<String> baneados = listaBaneos.get(userWhoBan);
+		if (baneados.add(userToBan)) {
+			System.out.println(msg.getNickname() + " ha baneado a " + msg.getMessage());
+		}
+		listaBaneos.put(userWhoBan, baneados);
 
 	}
 
+	/**
+	 * Desbanea un usuario.
+	 * 
+	 * @param msg
+	 *            mensaje con los datos del usuario a desbanear
+	 */
+	public void unban(ChatMessage msg) {
+		String userToUnban = msg.getMessage().toLowerCase();
+		String userWhoUnban = msg.getNickname().toLowerCase();
+
+		HashSet<String> baneados = listaBaneos.get(userWhoUnban);
+		if (baneados.remove(userToUnban)) {
+			System.out.println(msg.getNickname() + " ha desbaneado a " + msg.getMessage());
+		}
+		listaBaneos.put(userWhoUnban, baneados);
+	}
+
+	/**
+	 * Comprueba si un usuario tiene baneado a otro.
+	 * 
+	 * @param user1
+	 *            usuario que igual a baneado al usuario2
+	 * @param user2
+	 *            usuario que igual tiene baneado el usuario1
+	 * @return
+	 */
+	private boolean checkIsBanned(String user1, String user2) {
+		return listaBaneos.get(user1.toLowerCase()).contains(user2);
+	}
 }
