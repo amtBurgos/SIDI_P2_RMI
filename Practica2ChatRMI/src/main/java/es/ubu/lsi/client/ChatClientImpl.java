@@ -9,6 +9,8 @@ import java.rmi.server.UnicastRemoteObject;
 import es.ubu.lsi.common.ChatMessage;
 
 /**
+ * Implementa un ChatClient.
+ * 
  * @author Andrés Miguel Terán
  * @author Francisco Saiz Güemes
  *
