@@ -116,3 +116,54 @@
 2017-04-21 02:13:10,829 [Worker-55] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Programas\workspace_SIDI\SIDI_P2_RMI\Practica2ChatRMI\src\main\resources
 2017-04-21 02:13:10,836 [Worker-55] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2017-04-21 02:13:10,843 [Worker-55] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Programas\workspace_SIDI\SIDI_P2_RMI\Practica2ChatRMI\src\test\resources
+2017-04-21 17:32:17,982 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-04-21 17:32:17,986 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Programas\workspace_SIDI\SIDI_P2_RMI\Practica2ChatRMI\src\main\resources
+2017-04-21 17:32:17,989 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-04-21 17:32:17,989 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Programas\workspace_SIDI\SIDI_P2_RMI\Practica2ChatRMI\src\test\resources
+2017-04-21 17:32:25,877 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-04-21 17:32:25,877 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Programas\workspace_SIDI\SIDI_P2_RMI\Practica2ChatRMI-Web\src\main\resources
+2017-04-21 17:32:25,880 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-04-21 17:32:25,880 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Programas\workspace_SIDI\SIDI_P2_RMI\Practica2ChatRMI-Web\src\test\resources
+2017-04-24 17:50:02,156 [Worker-4] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-04-24 17:50:02,160 [Worker-4] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Programas\workspace_SIDI\SIDI_P2_RMI\Practica2ChatRMI\src\main\resources
+2017-04-24 17:50:02,163 [Worker-4] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-04-24 17:50:02,164 [Worker-4] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Programas\workspace_SIDI\SIDI_P2_RMI\Practica2ChatRMI\src\test\resources
+2017-04-24 17:50:12,626 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-04-24 17:50:12,627 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Programas\workspace_SIDI\SIDI_P2_RMI\Practica2ChatRMI-Web\src\main\resources
+2017-04-24 17:50:12,629 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-04-24 17:50:12,629 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Programas\workspace_SIDI\SIDI_P2_RMI\Practica2ChatRMI-Web\src\test\resources
+2017-04-24 19:08:37,747 [Worker-34] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: es.ubu.lsi:Practica2ChatRMI:0.0.1-SNAPSHOT @ C:\Programas\workspace_SIDI\SIDI_P2_RMI\ZZ_Practica2ChatRMI\pom.xml.
+2017-04-24 19:08:38,309 [Worker-34] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-04-24 19:08:38,309 [Worker-34] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Programas\workspace_SIDI\SIDI_P2_RMI\ZZ_Practica2ChatRMI\src\main\resources
+2017-04-24 19:08:38,309 [Worker-34] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-04-24 19:08:38,309 [Worker-34] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Programas\workspace_SIDI\SIDI_P2_RMI\ZZ_Practica2ChatRMI\src\test\resources
+2017-04-24 19:08:38,789 [Worker-34] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-04-24 19:08:38,789 [Worker-34] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Programas\workspace_SIDI\SIDI_P2_RMI\ZZ_Practica2ChatRMI\src\main\resources
+2017-04-24 19:08:38,789 [Worker-34] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-04-24 19:08:38,805 [Worker-34] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Programas\workspace_SIDI\SIDI_P2_RMI\ZZ_Practica2ChatRMI\src\test\resources
+2017-04-24 19:08:39,164 [Worker-34] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: es.ubu.lsi:Practica2ChatRMI-Web:0.0.1-SNAPSHOT @ C:\Programas\workspace_SIDI\SIDI_P2_RMI\ZZ_Practica2ChatRMI-Web\pom.xml.
+2017-04-24 19:08:39,367 [Worker-34] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-04-24 19:08:39,367 [Worker-34] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Programas\workspace_SIDI\SIDI_P2_RMI\ZZ_Practica2ChatRMI-Web\src\main\resources
+2017-04-24 19:08:39,383 [Worker-34] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-04-24 19:08:39,383 [Worker-34] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Programas\workspace_SIDI\SIDI_P2_RMI\ZZ_Practica2ChatRMI-Web\src\test\resources
+2017-04-24 19:24:58,437 [Worker-49] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-jar-plugin/2.6/maven-jar-plugin-2.6.jar
+2017-04-24 19:24:58,605 [Worker-49] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-jar-plugin/2.6/maven-jar-plugin-2.6.jar
+2017-04-24 19:24:58,761 [Worker-49] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: es.ubu.lsi:Practica2ChatRMI:0.0.1-SNAPSHOT @ C:\Programas\workspace_SIDI\SIDI_P2_RMI\Practica2ChatRMI\pom.xml.
+2017-04-24 19:24:58,933 [Worker-49] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-jar-plugin/2.6/maven-jar-plugin-2.6.pom
+2017-04-24 19:24:59,013 [Worker-49] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-jar-plugin/2.6/maven-jar-plugin-2.6.pom
+2017-04-24 19:24:59,044 [Worker-49] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-04-24 19:24:59,044 [Worker-49] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Programas\workspace_SIDI\SIDI_P2_RMI\Practica2ChatRMI\src\main\resources
+2017-04-24 19:24:59,044 [Worker-49] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-04-24 19:24:59,044 [Worker-49] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Programas\workspace_SIDI\SIDI_P2_RMI\Practica2ChatRMI\src\test\resources
+2017-04-24 19:24:59,547 [Worker-49] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-io/2.4/plexus-io-2.4.jar
+2017-04-24 19:24:59,790 [Worker-49] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-io/2.4/plexus-io-2.4.jar
+2017-04-24 19:25:03,387 [Worker-47] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: es.ubu.lsi:Practica2ChatRMI:0.0.1-SNAPSHOT @ C:\Programas\workspace_SIDI\SIDI_P2_RMI\Practica2ChatRMI\pom.xml.
+2017-04-24 19:25:03,450 [Worker-47] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-04-24 19:25:03,450 [Worker-47] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Programas\workspace_SIDI\SIDI_P2_RMI\Practica2ChatRMI\src\main\resources
+2017-04-24 19:25:03,466 [Worker-47] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-04-24 19:25:03,466 [Worker-47] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Programas\workspace_SIDI\SIDI_P2_RMI\Practica2ChatRMI\src\test\resources
+2017-04-24 19:25:14,644 [Worker-47] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: es.ubu.lsi:Practica2ChatRMI:0.0.1-SNAPSHOT @ C:\Programas\workspace_SIDI\SIDI_P2_RMI\Practica2ChatRMI\pom.xml.
+2017-04-24 19:25:14,707 [Worker-47] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-04-24 19:25:14,707 [Worker-47] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Programas\workspace_SIDI\SIDI_P2_RMI\Practica2ChatRMI\src\main\resources
+2017-04-24 19:25:14,707 [Worker-47] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-04-24 19:25:14,722 [Worker-47] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Programas\workspace_SIDI\SIDI_P2_RMI\Practica2ChatRMI\src\test\resources
