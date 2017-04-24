@@ -29,11 +29,10 @@ public class ChatClientDynamic {
 			String url = p.getProperty("java.rmi.server.codebase");
 			// Load class
 			Class<?> clientClass;
-			clientClass = RMIClassLoader.loadClass(url,
-					"es.ubu.lsi.client.ChatClientStarter");
+			clientClass = RMIClassLoader.loadClass(url, "es.ubu.lsi.client.ChatClientStarter");
 			// Starts client
-			Constructor<?> cons = clientClass.getConstructor(String[].class);			
-			cons.newInstance((Object)args);
+			Constructor<?> cons = clientClass.getConstructor(String[].class);
+			cons.newInstance((Object) args);
 		} catch (Exception e) {
 			System.err.println("Excepcion en arranque del cliente " + e.toString());
 		}

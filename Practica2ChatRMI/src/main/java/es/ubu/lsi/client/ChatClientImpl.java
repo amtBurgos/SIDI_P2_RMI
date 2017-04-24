@@ -4,45 +4,71 @@
 package es.ubu.lsi.client;
 
 import java.rmi.RemoteException;
+import java.rmi.server.UnicastRemoteObject;
 
 import es.ubu.lsi.common.ChatMessage;
 
 /**
- * @author Andres
+ * @author Andrés Miguel Terán
+ * @author Francisco Saiz Güemes
  *
  */
-public class ChatClientImpl implements ChatClient {
+public class ChatClientImpl extends UnicastRemoteObject implements ChatClient {
 
-	/* (non-Javadoc)
+	/**
+	 * Nombre de usuario.
+	 */
+	private String nickName;
+
+	/**
+	 * Id de usuario.
+	 */
+	private int id;
+
+	/**
+	 * Construye un cliente.
+	 * 
+	 * @throws RemoteException
+	 */
+	public ChatClientImpl(String nickName) throws RemoteException {
+		super();
+		this.nickName = nickName;
+	}
+
+	/*
+	 * (non-Javadoc)
+	 * 
 	 * @see es.ubu.lsi.client.ChatClient#getId()
 	 */
 	public int getId() throws RemoteException {
-		// TODO Auto-generated method stub
-		return 0;
+		return id;
 	}
 
-	/* (non-Javadoc)
+	/*
+	 * (non-Javadoc)
+	 * 
 	 * @see es.ubu.lsi.client.ChatClient#setId(int)
 	 */
 	public void setId(int id) throws RemoteException {
-		// TODO Auto-generated method stub
-
+		this.id = id;
 	}
 
-	/* (non-Javadoc)
+	/*
+	 * (non-Javadoc)
+	 * 
 	 * @see es.ubu.lsi.client.ChatClient#receive(es.ubu.lsi.common.ChatMessage)
 	 */
 	public void receive(ChatMessage msg) throws RemoteException {
-		// TODO Auto-generated method stub
-
+		System.out.println(msg.getNickname() + ": " + msg.getMessage());
 	}
 
-	/* (non-Javadoc)
+	/*
+	 * (non-Javadoc)
+	 * 
 	 * @see es.ubu.lsi.client.ChatClient#getNickName()
 	 */
 	public String getNickName() throws RemoteException {
-		// TODO Auto-generated method stub
-		return null;
+		return nickName;
 	}
 
 }
