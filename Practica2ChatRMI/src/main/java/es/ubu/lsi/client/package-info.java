@@ -1,8 +1,7 @@
 /**
+ * Clases del cliente.
  * 
- */
-/**
- * @author Andres
- *
+ * @author Andrés Miguel Terán
+ * @author Francisco Saiz Güemes
  */
 package es.ubu.lsi.client;

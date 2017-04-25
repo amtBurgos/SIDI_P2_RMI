@@ -3,12 +3,10 @@
  */
 package es.ubu.lsi.server;
 
-import java.lang.reflect.Array;
 import java.rmi.RemoteException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
-import java.util.Set;
 
 import es.ubu.lsi.client.ChatClient;
 import es.ubu.lsi.common.ChatMessage;
@@ -60,14 +58,41 @@ public class ChatServerImpl implements ChatServer {
 	 * @see es.ubu.lsi.server.ChatServer#checkIn(es.ubu.lsi.client.ChatClient)
 	 */
 	public int checkIn(ChatClient client) throws RemoteException {
-		listaClientes.add(client);
-		// Si el cliente se ha vuelto a conectar no cambiamos los baneos que
-		// tenia configurados
-		if (!listaBaneos.containsKey(client.getNickName().toLowerCase())) {
-			listaBaneos.put(client.getNickName().toLowerCase(), new HashSet<String>());
+		int id = -1;
+		if (!checkClientExist(client.getNickName())) {
+			id = clientesTotales++;
+			client.setId(id);
+			listaClientes.add(client);
+			// Si el cliente se ha vuelto a conectar no cambiamos los baneos que
+			// tenia configurados
+			if (!listaBaneos.containsKey(client.getNickName().toLowerCase())) {
+				listaBaneos.put(client.getNickName().toLowerCase(), new HashSet<String>());
+			}
+			publish(new ChatMessage(-1, SERVER_NAME, client.getNickName() + " se ha conectado."));
 		}
-		publish(new ChatMessage(-1, SERVER_NAME, client.getNickName() + " se ha conectado."));
-		return clientesTotales++;
+		return id;
+	}
+
+	/**
+	 * Comprueba si el nombre de usuario ya está escogido.
+	 * 
+	 * @param nickName
+	 *            nombre de usuario a validar
+	 * @return true/false si existe o no el nombre
+	 */
+	private boolean checkClientExist(String nickName) {
+		boolean existe = false;
+		for (ChatClient client : listaClientes) {
+			try {
+				if (client.getNickName().toLowerCase().equals(nickName.toLowerCase())) {
+					existe = true;
+					break;
+				}
+			} catch (RemoteException e) {
+				System.err.println("No se puede acceder a la lista de usuarios activos.");
+			}
+		}
+		return existe;
 	}
 
 	/*
@@ -91,12 +116,14 @@ public class ChatServerImpl implements ChatServer {
 		for (ChatClient client : listaClientes) {
 			if (msg.getId() == client.getId()) {
 				emisor = client;
+				break;
 			}
 		}
 
 		for (ChatClient receptor : listaClientes) {
 			if (receptor.getNickName().toLowerCase().equals(tonickname)) {
 				receptor.receive(new ChatMessage(msg.getId(), emisor.getNickName(), msg.getMessage() + " (private)"));
+				break;
 			}
 		}
 	}
@@ -107,15 +134,14 @@ public class ChatServerImpl implements ChatServer {
 	 * @see es.ubu.lsi.server.ChatServer#publish(es.ubu.lsi.common.ChatMessage)
 	 */
 	public void publish(ChatMessage msg) throws RemoteException {
-
 		// Gestionar el mensaje
-
 		for (ChatClient client : listaClientes) {
 			// Si el id es distinto lo mandamos
 			if (client.getId() != msg.getId()) {
 				// Si el usuario no está baneado por alguno lo mandamos
-				if (!checkIsBanned(client.getNickName(), msg.getNickname()))
+				if (!checkIsBanned(client.getNickName(), msg.getNickname())) {
 					client.receive(msg);
+				}
 			}
 		}
 	}
@@ -147,10 +173,11 @@ public class ChatServerImpl implements ChatServer {
 
 		HashSet<String> baneados = listaBaneos.get(userWhoBan);
 		if (baneados.add(userToBan)) {
-			System.out.println(msg.getNickname() + " ha baneado a " + msg.getMessage());
+			System.out.println(msg.getNickname() + " ha baneado a " + msg.getMessage() + ".");
+		} else {
+			System.out.println(msg.getNickname() + " ya había baneado a " + msg.getMessage() + ".");
 		}
 		listaBaneos.put(userWhoBan, baneados);
-
 	}
 
 	/**
@@ -165,7 +192,10 @@ public class ChatServerImpl implements ChatServer {
 
 		HashSet<String> baneados = listaBaneos.get(userWhoUnban);
 		if (baneados.remove(userToUnban)) {
-			System.out.println(msg.getNickname() + " ha desbaneado a " + msg.getMessage());
+			System.out.println(msg.getNickname() + " ha desbaneado a " + msg.getMessage() + ".");
+		} else {
+			System.out.println(
+					msg.getNickname() + " no puede desbanear a " + msg.getMessage() + " porque no está baneado.");
 		}
 		listaBaneos.put(userWhoUnban, baneados);
 	}

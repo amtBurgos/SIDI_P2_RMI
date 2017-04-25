@@ -79,13 +79,18 @@ public class ChatClientStarter {
 
 		try {
 			// Registramos el cliente y le damos un id.
-			client.setId(server.checkIn(client));
+			if (server.checkIn(client) == -1) {
+				// Si el nombre ya lo tiene registrado, el servidor no nos
+				// dejará entrar
+				System.err.println("El nombre de usuario ya existe, introduce otro.");
+				cerrarCliente(0);
+			} else {
+				mensajeBienvenida(nickName);
+			}
 		} catch (RemoteException e) {
 			System.err.println("No se puede registrar el cliente, cerrando...");
 			cerrarCliente(1);
 		}
-
-		mensajeBienvenida(nickName);
 
 		Scanner scan = new Scanner(System.in);
 		// Manejo de mensajes

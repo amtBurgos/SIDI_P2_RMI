@@ -18,6 +18,11 @@ import es.ubu.lsi.common.ChatMessage;
 public class ChatClientImpl extends UnicastRemoteObject implements ChatClient {
 
 	/**
+	 * Serial Version.
+	 */
+	private static final long serialVersionUID = 1L;
+
+	/**
 	 * Nombre de usuario.
 	 */
 	private String nickName;
