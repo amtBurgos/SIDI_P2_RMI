@@ -38,7 +38,7 @@ public class ChatServerStarter {
 			Class<?> serverClass = RMIClassLoader.loadClass(url, "es.ubu.lsi.server.ChatServerImpl");
 			// inicia el cliente
 			Naming.rebind("/ChatServerImpl", (Remote) serverClass.newInstance());
-			System.out.println("Objeto publicado");
+			System.out.println("Servidor activo...");
 		} catch (Exception e) {
 			System.err.println("Excepcion en arranque del servidor " + e.toString());
 		}

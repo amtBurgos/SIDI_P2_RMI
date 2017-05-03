@@ -62,20 +62,20 @@ public class ChatClientStarter {
 		try {
 			try {
 				// Obtenemos la clase del servidor.
-				System.out.println("Buscando objeto servidor");
+				System.out.println("Conectando con el servidor...");
 				server = (ChatServer) Naming.lookup("rmi://" + host + "/ChatServerImpl");
 			} catch (MalformedURLException e) {
 				System.err.println("Direccion de host no válida.");
-				e.printStackTrace();
+				throw e;
 			} catch (RemoteException e) {
 				System.err.println("Fallo remoto.");
-				e.printStackTrace();
+				throw e;
 			} catch (NotBoundException e) {
 				System.err.println("No se encuentra la clase servidor.");
-				e.printStackTrace();
+				throw e;
 			}
 		} catch (Exception e) {
-			System.err.println("No se puede iniciar el servidor, cerrando...");
+			System.err.println("El servidor no está activo.");
 			e.printStackTrace();
 			cerrarCliente(1);
 		}
@@ -98,6 +98,7 @@ public class ChatClientStarter {
 		Scanner scan = new Scanner(System.in);
 		// Manejo de mensajes
 		while (sendMessages) {
+			System.out.print("> ");
 			String msg = scan.nextLine();
 
 			if (msg.toLowerCase().matches("^\\s*logout\\s*")) {
@@ -112,42 +113,37 @@ public class ChatClientStarter {
 			} else if (msg.toLowerCase().matches("^\\s*shutdown\\s*")) {
 				try {
 					server.shutdown(client);
-					sendMessages = false;
-					System.out.println("El servidor se cerrará.");
 				} catch (RemoteException e) {
-					e.printStackTrace();
-					System.err.println("No se puede ordenar al servidor que se apague.");
+					System.out.println("Has apagado el servidor.");
+				} finally {
+					sendMessages = false;
 				}
 			} else if (msg.toLowerCase().matches("^\\s*ban\\s+\\S+\\s*")) {
 				String userToBan = banManager(msg);
 				try {
 					server.ban(new ChatMessage(client.getId(), client.getNickName(), userToBan));
-					System.out.print("> ");
 				} catch (RemoteException e) {
-					System.err.println("Error al banear usuario.");
+					System.err.println("Error al intentar banear usuario.");
 				}
 			} else if (msg.toLowerCase().matches("^\\s*unban\\s+\\S+\\s*")) {
 				String userToUnban = banManager(msg);
 				try {
 					server.unban(new ChatMessage(client.getId(), client.getNickName(), userToUnban));
-					System.out.print("> ");
 				} catch (RemoteException e) {
-					System.err.println("Error al desbanear usuario.");
+					System.err.println("Error al intentar desbanear usuario.");
 				}
 			} else {
 				try {
 					server.publish(new ChatMessage(client.getId(), client.getNickName(), msg));
-					System.out.print("> ");
 				} catch (RemoteException e) {
-					e.printStackTrace();
-					System.err.println("No se puede enviar el mensaje.");
+					System.err.println("El servidor se ha apagado.");
+					sendMessages = false;
 				}
 			}
 		}
 
 		// Cerrar scanner y salir del programa
 		scan.close();
-		System.out.println("Te has desconectado.");
 		cerrarCliente(0);
 	}
 
@@ -200,7 +196,7 @@ public class ChatClientStarter {
 	 *            1 si es un error, 0 si desconexión normarl
 	 */
 	public void cerrarCliente(int code) {
-		System.out.println("Cerrando...");
+		System.out.println("Desconectando...");
 		System.exit(code);
 	}
 

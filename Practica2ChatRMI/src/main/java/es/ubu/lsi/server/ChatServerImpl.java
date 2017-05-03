@@ -31,7 +31,7 @@ public class ChatServerImpl extends UnicastRemoteObject implements ChatServer {
 	/**
 	 * Nombre del servidor.
 	 */
-	private static String SERVER_NAME = "Server";
+	private static String SERVER_NAME = "SERVER";
 
 	/**
 	 * Lista de clientes.
@@ -158,7 +158,7 @@ public class ChatServerImpl extends UnicastRemoteObject implements ChatServer {
 	public void shutdown(ChatClient client) throws RemoteException {
 		for (ChatClient cliente : listaClientes) {
 			if (cliente.getId() != client.getId()) {
-				cliente.receive(new ChatMessage(-1, SERVER_NAME, "El servidor se cerrará"));
+				cliente.receive(new ChatMessage(-1, SERVER_NAME, "El servidor se cerrará."));
 			}
 		}
 		listaClientes = null;
@@ -176,6 +176,7 @@ public class ChatServerImpl extends UnicastRemoteObject implements ChatServer {
 		String userWhoBan = msg.getNickname().toLowerCase();
 
 		HashSet<String> baneados = listaBaneos.get(userWhoBan);
+		// Comunicamos los baneos al servidor
 		if (baneados.add(userToBan)) {
 			System.out.println(msg.getNickname() + " ha baneado a " + msg.getMessage() + ".");
 		} else {
