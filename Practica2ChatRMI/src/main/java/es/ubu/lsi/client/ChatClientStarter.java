@@ -152,7 +152,8 @@ public class ChatClientStarter {
 	 * aplicarselo.
 	 * 
 	 * @param message
-	 * @return
+	 *            mensaje con el usuario a banear
+	 * @return usuario a banear
 	 */
 	private String banManager(String message) {
 		String[] command = message.split("\\s");
@@ -178,7 +179,7 @@ public class ChatClientStarter {
 	 * @param name
 	 *            nombre de usuario
 	 */
-	public void mensajeBienvenida(String name) {
+	private void mensajeBienvenida(String name) {
 		System.out.println("\n\n            · BIENVENIDO ·\n");
 		System.out.println("Te has logeado correctamente en el chat.\n");
 		System.out.println("Tu nombre de usuario es: " + name);
@@ -195,7 +196,7 @@ public class ChatClientStarter {
 	 * @param code
 	 *            1 si es un error, 0 si desconexión normarl
 	 */
-	public void cerrarCliente(int code) {
+	private void cerrarCliente(int code) {
 		System.out.println("Desconectando...");
 		System.exit(code);
 	}
