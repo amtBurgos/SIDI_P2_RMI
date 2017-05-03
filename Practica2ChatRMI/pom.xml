@@ -34,8 +34,6 @@
 							<tasks>
 								<copy todir="../Practica2ChatRMI-Web/src/main/webapp">
 									<fileset dir="./target/classes">
-										<exclude name="**/*ChatClientDynamic.class" />
-										<exclude name="**/*ChatServerDynamic.class" />
 									</fileset>
 								</copy>
 

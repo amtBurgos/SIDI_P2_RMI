@@ -1,9 +1,7 @@
-/**
- * 
- */
 package es.ubu.lsi.server;
 
 import java.rmi.RemoteException;
+import java.rmi.server.UnicastRemoteObject;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -18,7 +16,12 @@ import es.ubu.lsi.common.ChatMessage;
  * @author Francisco Saiz Güemes
  *
  */
-public class ChatServerImpl implements ChatServer {
+public class ChatServerImpl extends UnicastRemoteObject implements ChatServer {
+
+	/**
+	 * Serial version UID.
+	 */
+	private static final long serialVersionUID = 1L;
 
 	/**
 	 * Numero de clientes en el chat.
@@ -103,6 +106,7 @@ public class ChatServerImpl implements ChatServer {
 	public void logout(ChatClient client) throws RemoteException {
 		listaClientes.remove(client);
 		publish(new ChatMessage(-1, SERVER_NAME, client.getNickName() + " se ha desconectado"));
+		System.out.println(client.getNickName() + " se ha desconectado");
 	}
 
 	/*

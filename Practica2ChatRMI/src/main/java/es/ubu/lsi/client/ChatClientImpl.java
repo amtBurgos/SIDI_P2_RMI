@@ -70,6 +70,7 @@ public class ChatClientImpl extends UnicastRemoteObject implements ChatClient {
 	 */
 	public void receive(ChatMessage msg) throws RemoteException {
 		System.out.println(msg.getNickname() + ": " + msg.getMessage());
+		System.out.print("> ");
 	}
 
 	/*

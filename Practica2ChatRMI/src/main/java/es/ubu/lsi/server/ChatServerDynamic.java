@@ -27,8 +27,7 @@ public class ChatServerDynamic {
 			// lee el codebase
 			String url = p.getProperty("java.rmi.server.codebase");
 			// cargador de clases
-			Class<?> serverClass = RMIClassLoader.loadClass(url,
-					"es.ubu.lsi.server.ChatServerStarter");
+			Class<?> serverClass = RMIClassLoader.loadClass(url,"es.ubu.lsi.server.ChatServerStarter");
 			// inicia el cliente
 			serverClass.newInstance();
 		} catch (Exception e) {

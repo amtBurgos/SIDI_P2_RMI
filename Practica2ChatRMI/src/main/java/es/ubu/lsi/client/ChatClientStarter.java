@@ -10,6 +10,7 @@ import java.rmi.RemoteException;
 import java.util.Scanner;
 
 import es.ubu.lsi.common.ChatMessage;
+import es.ubu.lsi.server.ChatServer;
 import es.ubu.lsi.server.ChatServerImpl;
 
 /**
@@ -38,9 +39,9 @@ public class ChatClientStarter {
 		String nickName = null;
 		String host = "localhost";
 		ChatClientImpl client = null;
-		ChatServerImpl server = null;
-
-		if (args.length < 0 && args.length < 3) {
+		ChatServer server = null;
+		System.out.println("Argumentos: " + args.length);
+		if (args.length > 0 && args.length < 3) {
 			nickName = args[0];
 			if (args.length == 2) {
 				host = args[1];
@@ -61,19 +62,21 @@ public class ChatClientStarter {
 		try {
 			try {
 				// Obtenemos la clase del servidor.
-				server = (ChatServerImpl) Naming.lookup("rmi//" + host + "/ChatServerImpl");
+				System.out.println("Buscando objeto servidor");
+				server = (ChatServer) Naming.lookup("rmi://" + host + "/ChatServerImpl");
 			} catch (MalformedURLException e) {
 				System.err.println("Direccion de host no válida.");
-				throw e;
+				e.printStackTrace();
 			} catch (RemoteException e) {
 				System.err.println("Fallo remoto.");
-				throw e;
+				e.printStackTrace();
 			} catch (NotBoundException e) {
 				System.err.println("No se encuentra la clase servidor.");
-				throw e;
+				e.printStackTrace();
 			}
 		} catch (Exception e) {
 			System.err.println("No se puede iniciar el servidor, cerrando...");
+			e.printStackTrace();
 			cerrarCliente(1);
 		}
 
@@ -119,6 +122,7 @@ public class ChatClientStarter {
 				String userToBan = banManager(msg);
 				try {
 					server.ban(new ChatMessage(client.getId(), client.getNickName(), userToBan));
+					System.out.print("> ");
 				} catch (RemoteException e) {
 					System.err.println("Error al banear usuario.");
 				}
@@ -126,12 +130,14 @@ public class ChatClientStarter {
 				String userToUnban = banManager(msg);
 				try {
 					server.unban(new ChatMessage(client.getId(), client.getNickName(), userToUnban));
+					System.out.print("> ");
 				} catch (RemoteException e) {
 					System.err.println("Error al desbanear usuario.");
 				}
 			} else {
 				try {
 					server.publish(new ChatMessage(client.getId(), client.getNickName(), msg));
+					System.out.print("> ");
 				} catch (RemoteException e) {
 					e.printStackTrace();
 					System.err.println("No se puede enviar el mensaje.");

@@ -237,3 +237,364 @@ java.lang.IllegalArgumentException: timeout value is negative
 
 !ENTRY org.eclipse.wst.server.discovery 1 0 2017-04-25 01:58:40.352
 !MESSAGE already installed: org.eclipse.jst.server.generic.jonas4
+!SESSION 2017-04-25 18:39:50.700 -----------------------------------------------
+eclipse.buildId=4.6.2.M20161124-1400
+java.version=1.8.0_121
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=es_ES
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2017-04-25 18:40:12.085
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Andres'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.jface.text 2 0 2017-04-25 18:42:07.621
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-04-25 18:42:07.628
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
+!SESSION 2017-04-26 21:17:57.542 -----------------------------------------------
+eclipse.buildId=4.6.2.M20161124-1400
+java.version=1.8.0_121
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=es_ES
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2017-04-26 21:20:11.075
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Andres'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.wst.server.discovery 1 0 2017-04-26 21:26:04.561
+!MESSAGE already installed: org.eclipse.jst.server.generic.jonas4
+!SESSION 2017-04-28 19:18:29.973 -----------------------------------------------
+eclipse.buildId=4.6.2.M20161124-1400
+java.version=1.8.0_121
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=es_ES
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.core.resources 2 10035 2017-04-28 19:18:39.555
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.egit.ui 2 0 2017-04-28 19:18:57.723
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Andres'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2017-05-02 18:29:33.309 -----------------------------------------------
+eclipse.buildId=4.6.2.M20161124-1400
+java.version=1.8.0_121
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=es_ES
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2017-05-02 18:30:00.753
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Andres'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2017-05-02 19:19:32.528 -----------------------------------------------
+eclipse.buildId=4.6.2.M20161124-1400
+java.version=1.8.0_121
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=es_ES
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2017-05-02 19:21:09.341
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Andres'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.equinox.p2.updatechecker 4 0 2017-05-02 19:24:04.097
+!MESSAGE Exception in update check thread
+!STACK 0
+java.lang.IllegalArgumentException: timeout value is negative
+	at java.lang.Thread.sleep(Native Method)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker$UpdateCheckThread.run(UpdateChecker.java:86)
+!SESSION 2017-05-02 21:57:29.960 -----------------------------------------------
+eclipse.buildId=4.6.2.M20161124-1400
+java.version=1.8.0_121
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=es_ES
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2017-05-02 21:58:04.716
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Andres'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.wst.server.discovery 1 0 2017-05-02 22:05:08.676
+!MESSAGE already installed: org.eclipse.jst.server.generic.jonas4
+
+!ENTRY org.eclipse.equinox.p2.updatechecker 4 0 2017-05-02 22:37:52.071
+!MESSAGE Exception in update check thread
+!STACK 0
+java.lang.IllegalArgumentException: timeout value is negative
+	at java.lang.Thread.sleep(Native Method)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker$UpdateCheckThread.run(UpdateChecker.java:86)
+
+!ENTRY org.eclipse.jface.text 2 0 2017-05-02 23:50:55.661
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-05-02 23:50:55.677
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-05-02 23:51:09.643
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-05-02 23:51:09.659
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
+
+!ENTRY oracle.eclipse.tools.glassfish 4 0 2017-05-03 01:42:22.314
+!MESSAGE deploy is failing=
+!STACK 0
+java.lang.Exception: deploy is failing=Application with name [Practica2ChatRMI-Web] is not deployed
+	at oracle.eclipse.tools.glassfish.GlassFishServerBehaviour.publishDeployedDirectory(GlassFishServerBehaviour.java:603)
+	at oracle.eclipse.tools.glassfish.GlassFishServerBehaviour.publishModuleForGlassFishV3(GlassFishServerBehaviour.java:830)
+	at oracle.eclipse.tools.glassfish.GlassFishServerBehaviour.publishModule(GlassFishServerBehaviour.java:790)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publishModule(ServerBehaviourDelegate.java:1091)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publishModules(ServerBehaviourDelegate.java:1183)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:987)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:774)
+	at org.eclipse.wst.server.core.internal.Server.publishImpl(Server.java:3172)
+	at org.eclipse.wst.server.core.internal.Server$PublishJob.run(Server.java:345)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY oracle.eclipse.tools.glassfish 4 0 2017-05-03 01:42:22.377
+!MESSAGE cannot Deploy Practica2ChatRMI-Web
+!STACK 0
+java.lang.Exception: deploy is failing=Application with name [Practica2ChatRMI-Web] is not deployed
+	at oracle.eclipse.tools.glassfish.GlassFishServerBehaviour.publishDeployedDirectory(GlassFishServerBehaviour.java:603)
+	at oracle.eclipse.tools.glassfish.GlassFishServerBehaviour.publishModuleForGlassFishV3(GlassFishServerBehaviour.java:830)
+	at oracle.eclipse.tools.glassfish.GlassFishServerBehaviour.publishModule(GlassFishServerBehaviour.java:790)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publishModule(ServerBehaviourDelegate.java:1091)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publishModules(ServerBehaviourDelegate.java:1183)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:987)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:774)
+	at org.eclipse.wst.server.core.internal.Server.publishImpl(Server.java:3172)
+	at org.eclipse.wst.server.core.internal.Server$PublishJob.run(Server.java:345)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY oracle.eclipse.tools.glassfish 4 0 2017-05-03 01:42:43.113
+!MESSAGE deploy is failing=
+!STACK 0
+java.lang.Exception: deploy is failing=Application with name [Practica2ChatRMI-Web] is not deployed
+	at oracle.eclipse.tools.glassfish.GlassFishServerBehaviour.publishDeployedDirectory(GlassFishServerBehaviour.java:603)
+	at oracle.eclipse.tools.glassfish.GlassFishServerBehaviour.publishModuleForGlassFishV3(GlassFishServerBehaviour.java:830)
+	at oracle.eclipse.tools.glassfish.GlassFishServerBehaviour.publishModule(GlassFishServerBehaviour.java:790)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publishModule(ServerBehaviourDelegate.java:1091)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publishModules(ServerBehaviourDelegate.java:1183)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:987)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:774)
+	at org.eclipse.wst.server.core.internal.Server.publishImpl(Server.java:3172)
+	at org.eclipse.wst.server.core.internal.Server$PublishJob.run(Server.java:345)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY oracle.eclipse.tools.glassfish 4 0 2017-05-03 01:42:43.129
+!MESSAGE cannot Deploy Practica2ChatRMI-Web
+!STACK 0
+java.lang.Exception: deploy is failing=Application with name [Practica2ChatRMI-Web] is not deployed
+	at oracle.eclipse.tools.glassfish.GlassFishServerBehaviour.publishDeployedDirectory(GlassFishServerBehaviour.java:603)
+	at oracle.eclipse.tools.glassfish.GlassFishServerBehaviour.publishModuleForGlassFishV3(GlassFishServerBehaviour.java:830)
+	at oracle.eclipse.tools.glassfish.GlassFishServerBehaviour.publishModule(GlassFishServerBehaviour.java:790)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publishModule(ServerBehaviourDelegate.java:1091)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publishModules(ServerBehaviourDelegate.java:1183)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:987)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:774)
+	at org.eclipse.wst.server.core.internal.Server.publishImpl(Server.java:3172)
+	at org.eclipse.wst.server.core.internal.Server$PublishJob.run(Server.java:345)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY oracle.eclipse.tools.glassfish 4 0 2017-05-03 01:43:18.787
+!MESSAGE deploy is failing=
+!STACK 0
+java.lang.Exception: deploy is failing=Application with name [Practica2ChatRMI-Web] is not deployed
+	at oracle.eclipse.tools.glassfish.GlassFishServerBehaviour.publishDeployedDirectory(GlassFishServerBehaviour.java:603)
+	at oracle.eclipse.tools.glassfish.GlassFishServerBehaviour.publishModuleForGlassFishV3(GlassFishServerBehaviour.java:830)
+	at oracle.eclipse.tools.glassfish.GlassFishServerBehaviour.publishModule(GlassFishServerBehaviour.java:790)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publishModule(ServerBehaviourDelegate.java:1091)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publishModules(ServerBehaviourDelegate.java:1183)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:987)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:774)
+	at org.eclipse.wst.server.core.internal.Server.publishImpl(Server.java:3172)
+	at org.eclipse.wst.server.core.internal.Server$PublishJob.run(Server.java:345)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY oracle.eclipse.tools.glassfish 4 0 2017-05-03 01:43:18.803
+!MESSAGE cannot Deploy Practica2ChatRMI-Web
+!STACK 0
+java.lang.Exception: deploy is failing=Application with name [Practica2ChatRMI-Web] is not deployed
+	at oracle.eclipse.tools.glassfish.GlassFishServerBehaviour.publishDeployedDirectory(GlassFishServerBehaviour.java:603)
+	at oracle.eclipse.tools.glassfish.GlassFishServerBehaviour.publishModuleForGlassFishV3(GlassFishServerBehaviour.java:830)
+	at oracle.eclipse.tools.glassfish.GlassFishServerBehaviour.publishModule(GlassFishServerBehaviour.java:790)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publishModule(ServerBehaviourDelegate.java:1091)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publishModules(ServerBehaviourDelegate.java:1183)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:987)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:774)
+	at org.eclipse.wst.server.core.internal.Server.publishImpl(Server.java:3172)
+	at org.eclipse.wst.server.core.internal.Server$PublishJob.run(Server.java:345)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY oracle.eclipse.tools.glassfish 4 0 2017-05-03 01:43:30.547
+!MESSAGE deploy is failing=
+!STACK 0
+java.lang.Exception: deploy is failing=Application with name [Practica2ChatRMI-Web] is not deployed
+	at oracle.eclipse.tools.glassfish.GlassFishServerBehaviour.publishDeployedDirectory(GlassFishServerBehaviour.java:603)
+	at oracle.eclipse.tools.glassfish.GlassFishServerBehaviour.publishModuleForGlassFishV3(GlassFishServerBehaviour.java:830)
+	at oracle.eclipse.tools.glassfish.GlassFishServerBehaviour.publishModule(GlassFishServerBehaviour.java:790)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publishModule(ServerBehaviourDelegate.java:1091)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publishModules(ServerBehaviourDelegate.java:1183)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:987)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:774)
+	at org.eclipse.wst.server.core.internal.Server.publishImpl(Server.java:3172)
+	at org.eclipse.wst.server.core.internal.Server$PublishJob.run(Server.java:345)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY oracle.eclipse.tools.glassfish 4 0 2017-05-03 01:43:30.561
+!MESSAGE cannot Deploy Practica2ChatRMI-Web
+!STACK 0
+java.lang.Exception: deploy is failing=Application with name [Practica2ChatRMI-Web] is not deployed
+	at oracle.eclipse.tools.glassfish.GlassFishServerBehaviour.publishDeployedDirectory(GlassFishServerBehaviour.java:603)
+	at oracle.eclipse.tools.glassfish.GlassFishServerBehaviour.publishModuleForGlassFishV3(GlassFishServerBehaviour.java:830)
+	at oracle.eclipse.tools.glassfish.GlassFishServerBehaviour.publishModule(GlassFishServerBehaviour.java:790)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publishModule(ServerBehaviourDelegate.java:1091)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publishModules(ServerBehaviourDelegate.java:1183)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:987)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:774)
+	at org.eclipse.wst.server.core.internal.Server.publishImpl(Server.java:3172)
+	at org.eclipse.wst.server.core.internal.Server$PublishJob.run(Server.java:345)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SESSION 2017-05-03 01:45:20.320 -----------------------------------------------
+eclipse.buildId=4.6.2.M20161124-1400
+java.version=1.8.0_121
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=es_ES
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2017-05-03 01:47:08.679
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Andres'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY oracle.eclipse.tools.glassfish 4 0 2017-05-03 01:49:07.846
+!MESSAGE deploy is failing=
+!STACK 0
+java.lang.Exception: deploy is failing=Application with name [Practica2ChatRMI-Web] is not deployed
+	at oracle.eclipse.tools.glassfish.GlassFishServerBehaviour.publishDeployedDirectory(GlassFishServerBehaviour.java:603)
+	at oracle.eclipse.tools.glassfish.GlassFishServerBehaviour.publishModuleForGlassFishV3(GlassFishServerBehaviour.java:830)
+	at oracle.eclipse.tools.glassfish.GlassFishServerBehaviour.publishModule(GlassFishServerBehaviour.java:790)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publishModule(ServerBehaviourDelegate.java:1091)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publishModules(ServerBehaviourDelegate.java:1183)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:987)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:774)
+	at org.eclipse.wst.server.core.internal.Server.publishImpl(Server.java:3172)
+	at org.eclipse.wst.server.core.internal.Server$PublishJob.run(Server.java:345)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY oracle.eclipse.tools.glassfish 4 0 2017-05-03 01:49:07.908
+!MESSAGE cannot Deploy Practica2ChatRMI-Web
+!STACK 0
+java.lang.Exception: deploy is failing=Application with name [Practica2ChatRMI-Web] is not deployed
+	at oracle.eclipse.tools.glassfish.GlassFishServerBehaviour.publishDeployedDirectory(GlassFishServerBehaviour.java:603)
+	at oracle.eclipse.tools.glassfish.GlassFishServerBehaviour.publishModuleForGlassFishV3(GlassFishServerBehaviour.java:830)
+	at oracle.eclipse.tools.glassfish.GlassFishServerBehaviour.publishModule(GlassFishServerBehaviour.java:790)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publishModule(ServerBehaviourDelegate.java:1091)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publishModules(ServerBehaviourDelegate.java:1183)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:987)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:774)
+	at org.eclipse.wst.server.core.internal.Server.publishImpl(Server.java:3172)
+	at org.eclipse.wst.server.core.internal.Server$PublishJob.run(Server.java:345)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY oracle.eclipse.tools.glassfish 4 0 2017-05-03 01:50:24.395
+!MESSAGE deploy is failing=
+!STACK 0
+java.lang.Exception: deploy is failing=Application with name [Practica2ChatRMI-Web] is not deployed
+	at oracle.eclipse.tools.glassfish.GlassFishServerBehaviour.publishDeployedDirectory(GlassFishServerBehaviour.java:603)
+	at oracle.eclipse.tools.glassfish.GlassFishServerBehaviour.publishModuleForGlassFishV3(GlassFishServerBehaviour.java:830)
+	at oracle.eclipse.tools.glassfish.GlassFishServerBehaviour.publishModule(GlassFishServerBehaviour.java:790)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publishModule(ServerBehaviourDelegate.java:1091)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publishModules(ServerBehaviourDelegate.java:1183)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:987)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:774)
+	at org.eclipse.wst.server.core.internal.Server.publishImpl(Server.java:3172)
+	at org.eclipse.wst.server.core.internal.Server$PublishJob.run(Server.java:345)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY oracle.eclipse.tools.glassfish 4 0 2017-05-03 01:50:24.411
+!MESSAGE cannot Deploy Practica2ChatRMI-Web
+!STACK 0
+java.lang.Exception: deploy is failing=Application with name [Practica2ChatRMI-Web] is not deployed
+	at oracle.eclipse.tools.glassfish.GlassFishServerBehaviour.publishDeployedDirectory(GlassFishServerBehaviour.java:603)
+	at oracle.eclipse.tools.glassfish.GlassFishServerBehaviour.publishModuleForGlassFishV3(GlassFishServerBehaviour.java:830)
+	at oracle.eclipse.tools.glassfish.GlassFishServerBehaviour.publishModule(GlassFishServerBehaviour.java:790)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publishModule(ServerBehaviourDelegate.java:1091)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publishModules(ServerBehaviourDelegate.java:1183)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:987)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:774)
+	at org.eclipse.wst.server.core.internal.Server.publishImpl(Server.java:3172)
+	at org.eclipse.wst.server.core.internal.Server$PublishJob.run(Server.java:345)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY oracle.eclipse.tools.glassfish 4 0 2017-05-03 01:50:32.108
+!MESSAGE deploy is failing=
+!STACK 0
+java.lang.Exception: deploy is failing=Application with name [Practica2ChatRMI-Web] is not deployed
+	at oracle.eclipse.tools.glassfish.GlassFishServerBehaviour.publishDeployedDirectory(GlassFishServerBehaviour.java:603)
+	at oracle.eclipse.tools.glassfish.GlassFishServerBehaviour.publishModuleForGlassFishV3(GlassFishServerBehaviour.java:830)
+	at oracle.eclipse.tools.glassfish.GlassFishServerBehaviour.publishModule(GlassFishServerBehaviour.java:790)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publishModule(ServerBehaviourDelegate.java:1091)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publishModules(ServerBehaviourDelegate.java:1183)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:987)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:774)
+	at org.eclipse.wst.server.core.internal.Server.publishImpl(Server.java:3172)
+	at org.eclipse.wst.server.core.internal.Server$PublishJob.run(Server.java:345)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY oracle.eclipse.tools.glassfish 4 0 2017-05-03 01:50:32.108
+!MESSAGE cannot Deploy Practica2ChatRMI-Web
+!STACK 0
+java.lang.Exception: deploy is failing=Application with name [Practica2ChatRMI-Web] is not deployed
+	at oracle.eclipse.tools.glassfish.GlassFishServerBehaviour.publishDeployedDirectory(GlassFishServerBehaviour.java:603)
+	at oracle.eclipse.tools.glassfish.GlassFishServerBehaviour.publishModuleForGlassFishV3(GlassFishServerBehaviour.java:830)
+	at oracle.eclipse.tools.glassfish.GlassFishServerBehaviour.publishModule(GlassFishServerBehaviour.java:790)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publishModule(ServerBehaviourDelegate.java:1091)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publishModules(ServerBehaviourDelegate.java:1183)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:987)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:774)
+	at org.eclipse.wst.server.core.internal.Server.publishImpl(Server.java:3172)
+	at org.eclipse.wst.server.core.internal.Server$PublishJob.run(Server.java:345)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.jface.text 2 0 2017-05-03 01:58:45.450
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-05-03 01:58:45.465
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-05-03 02:35:21.197
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-05-03 02:35:21.204
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
